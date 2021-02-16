@@ -1,0 +1,70 @@
+<p>post works!</p>
+
+<button (click)="getAll()">GET</button>
+
+
+
+<div class="row">
+    <div class="col-4">
+    
+    
+    <div class="row">
+       <div class="col-12">
+         <h4 class="page-heading">Item Entry</h4>
+        </div>
+      </div>
+
+
+     <div class="row">
+      <form ngModelOptions="post">
+        <div class="col-sm-12">
+          <div class="input-group mb-2">
+            <label class="col-sm-3 label" for="">User Id</label>
+            <input type="number" class="form-control form-control-sm" placeholder="" [(ngModel)]="post.userId" name="userId"/>
+          </div>
+          <div class="input-group mb-2">
+            <label class="col-sm-3 label" for="">Title</label>
+            <input type="text" class="form-control form-control-sm" placeholder="" [(ngModel)]="post.title" name="title"/>
+          </div>
+          <div class="input-group mb-2">
+            <label class="col-sm-3 label" for="">Title</label>
+            <input type="text" class="form-control form-control-sm" placeholder="" [(ngModel)]="post.body" name="body"/>
+          </div>
+        </div>
+        <div class="col-sm-12">
+            <input type="button" value="Save" class="btn btn-success" (click)="save()" />
+        </div>
+       </form>
+      </div>
+    </div>
+
+    <div class="col-8">
+     
+     <div class="row">
+      <div class="col-12">
+        <h4 class="page-heading">Item List</h4>
+       </div>
+     </div>
+
+      <div class="row">
+        <table class="table table-responsive" style="width: 100%;">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">User Id</th>
+              <th scope="col">Title</th>
+              <th scope="col">Body</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of posts">
+              <th scope="row">{{item.id}}</th>
+              <td>{{item.userId}}</td>
+              <td>{{item.title}}</td>
+              <td>{{item.body}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+</div>
