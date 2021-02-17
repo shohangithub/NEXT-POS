@@ -60,8 +60,8 @@
           <tbody>
             <tr *ngFor="let item of posts">
               <th scope="row">{{item.id}}</th>
-              <th scope="row">{{item.id | inword}}</th>
-              <td>{{item.userId}}</td>
+              <th scope="row" appDecimalPoint>{{item.id | inword}}</th>
+              <td appDecimalPoint='red'>{{item.userId}}</td>
               <td>{{item.title}}</td>
               <td>{{item.body}}</td>
             </tr>

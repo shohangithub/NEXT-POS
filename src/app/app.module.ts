@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { InwordPipe } from './core/pipe/inword.pipe';
+import { DecimalPointDirective } from './common/directives/decimal-point.directive';
 
 @NgModule({
   imports: [
@@ -23,7 +24,7 @@ import { InwordPipe } from './core/pipe/inword.pipe';
     AppRoutingModule,
     
   ],
-  declarations: [AppComponent,PosMenuComponent, DashboardComponent, PostComponent, InwordPipe],
+  declarations: [AppComponent,PosMenuComponent, DashboardComponent, PostComponent, InwordPipe, DecimalPointDirective],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
