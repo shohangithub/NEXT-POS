@@ -51,6 +51,7 @@
           <thead>
             <tr>
               <th scope="col">#</th>
+              <th scope="col">In word</th>
               <th scope="col">User Id</th>
               <th scope="col">Title</th>
               <th scope="col">Body</th>
@@ -59,6 +60,7 @@
           <tbody>
             <tr *ngFor="let item of posts">
               <th scope="row">{{item.id}}</th>
+              <th scope="row">{{item.id | inword}}</th>
               <td>{{item.userId}}</td>
               <td>{{item.title}}</td>
               <td>{{item.body}}</td>

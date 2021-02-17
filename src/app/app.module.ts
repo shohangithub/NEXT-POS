@@ -11,6 +11,7 @@ import { PostComponent } from './post/post.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
+import { InwordPipe } from './core/pipe/inword.pipe';
 
 @NgModule({
   imports: [
@@ -22,7 +23,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     
   ],
-  declarations: [AppComponent,PosMenuComponent, DashboardComponent, PostComponent],
+  declarations: [AppComponent,PosMenuComponent, DashboardComponent, PostComponent, InwordPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
