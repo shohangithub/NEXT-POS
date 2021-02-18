@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { ValidationService } from '../common/services/validation.service';
 import { DataService } from '../core/data.service';
 import { CustomError } from '../core/error';
 import { Post } from './post';
@@ -14,7 +15,7 @@ export class PostComponent implements OnInit {
    post:Post= {id:0,userId:0,title:null,body:null};
    posts:Post[]=[];
 
-  constructor(private dataSvc:DataService) { }
+  constructor(private dataSvc:DataService,private svc:ValidationService) { }
 
   ngOnInit(): void {
     this.getAll();

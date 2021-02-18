@@ -13,6 +13,13 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { InwordPipe } from './core/pipe/inword.pipe';
 import { DecimalPointDirective } from './common/directives/decimal-point.directive';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import { MatchPasswordDirective } from './common/directives/matchPassword.directive';
+import { PasswordPatternDirective } from './common/directives/passwordPattern.directive';
+import { ValidateUserNameDirective } from './common/directives/validateUserName.directive';
+import { BuyerComponent } from './buyer/buyer/buyer.component';
+import { ValidationService } from './common/services/validation.service';
+import { NiValidationDirective } from './common/directives/niValidation.directive';
 
 @NgModule({
   imports: [
@@ -24,7 +31,11 @@ import { DecimalPointDirective } from './common/directives/decimal-point.directi
     AppRoutingModule,
     
   ],
-  declarations: [AppComponent,PosMenuComponent, DashboardComponent, PostComponent, InwordPipe, DecimalPointDirective],
+  declarations: [
+    AppComponent,PosMenuComponent, DashboardComponent, PostComponent,BuyerComponent, InwordPipe, TemplateDrivenFormComponent,
+
+    DecimalPointDirective,MatchPasswordDirective,PasswordPatternDirective,ValidateUserNameDirective,NiValidationDirective
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
