@@ -8,7 +8,7 @@ import { LoginModule } from './login/login.module';
 import { PosMenuComponent } from './shared/pos-menu/pos-menu.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { PostComponent } from './post/post.component';
-import { FormsModule } from '@angular/forms';
+import { AbstractControl, FormsModule,FormControl } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { InwordPipe } from './core/pipe/inword.pipe';
@@ -29,7 +29,6 @@ import { NiValidationDirective } from './common/directives/niValidation.directiv
     FormsModule,
     LoginModule,
     AppRoutingModule,
-    
   ],
   declarations: [
     AppComponent,PosMenuComponent, DashboardComponent, PostComponent,BuyerComponent, InwordPipe, TemplateDrivenFormComponent,

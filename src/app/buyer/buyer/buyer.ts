@@ -4,7 +4,7 @@ export class Buyer {
 
     constructor(
         public id: number = 0,
-        public name: string = '',
+        public buyerBasicName: string = '',
     ) { }
 
     public getBuyerBasicNameVMsgs(): any {

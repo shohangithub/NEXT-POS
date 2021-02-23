@@ -6,8 +6,9 @@ import { Buyer } from './buyer';
   templateUrl: './buyer.component.html'
 })
 export class BuyerComponent implements OnInit {
-  private buyer = new Buyer();
-  private valiationMsg:any;
+  public buyer = new Buyer();
+  public valiationMsg:any;
+  public x:any={name:'x'};
   constructor() {
     this.valiationMsg = this.buyer.getBuyerBasicNameVMsgs();
    }

@@ -1,7 +1,20 @@
 <p>
   buyer works!
 </p>
+<style>
+  .err {
+    border: 1px solid red;
+  }
+</style>
+<form name="f1" id="f1"  #registerForm="ngForm" validation-msg="valiationMsg.buyerBasicName">
 
-<form name="mform" id="f1" validation-msg="valiationMsg.buyerBasicName">
-   <input type="text" name="name" appNiValidation/>
+  <!-- <input type="text" name="name" />
+
+  <div name="f2" id="f1" validation-msg="valiationMsg.buyerBasicName" ng-form> -->
+    
+    <input type="text" name="name" appNiValidation class="err" ([ngModel])="buyer.buyerBasicName" />
+  <!-- </div>
+   -->
+
+
 </form>

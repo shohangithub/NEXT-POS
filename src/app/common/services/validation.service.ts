@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Global } from 'src/global/global';
-import { ValidationMsg } from '../models/validationMsg';
 
 @Injectable({
   providedIn: 'root'
