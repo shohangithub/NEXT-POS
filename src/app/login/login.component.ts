@@ -11,7 +11,21 @@ import { LoginService } from './login.service';
 })
 export class LoginComponent implements OnInit {
   
+  childData:any =[
+    {isCheck:false,field:"Hello",orderNo:0},
+    {isCheck:false,field:"How",orderNo:0},
+    {isCheck:false,field:"are",orderNo:0},
+    {isCheck:false,field:"you",orderNo:0},
+  ];
   
+  outputFrmChild:string="";
+
+  getString(output: string) {
+    console.log(`Form Parent ${output}`);
+    this.outputFrmChild = output;
+  }
+
+
   userForm = this.fb.group({
     userName:['',[Validators.required]],
     password:['',[Validators.required]],
